@@ -139,3 +139,11 @@ customized-ui/
         ├── ConversationReview.tsx      # post-call recording + transcript
         └── ConversationReview.module.css
 ```
+
+---
+
+## Related examples
+
+- [prebuilt-ui](https://github.com/Akapulu/prebuilt-ui) — minimal `AkapuluConversation` demo
+- [prebuilt-ui-styled](https://github.com/Akapulu/prebuilt-ui-styled) — styled prebuilt UI + post-call review
+
