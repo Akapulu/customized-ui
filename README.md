@@ -1,5 +1,7 @@
 # Akapulu Labs customized UI example
 
+[Read this example in our docs →](https://docs.akapulu.com/examples/web-sdk/customized-ui)
+
 A **fully custom** conversation UI built from `@akapulu/react` hooks + Daily
 primitives. You build the call surface yourself: video
 tiles, mic/cam/end controls, transcript, loading + error states, and tool toasts.
