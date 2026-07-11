@@ -1,0 +1,20 @@
+{
+  "name": "akapulu-customized-ui-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx --env-file=.env.local server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@akapulu/server": "^1.0.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.17.16",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3"
+  }
+}
