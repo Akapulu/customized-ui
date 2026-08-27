@@ -30,6 +30,7 @@ export function App() {
         connectBody: {
           runtime_vars: {},
         },
+        // Optional headers: object or function called at request time.
       }}
     >
       <CustomConversation onEnded={setReviewId} />

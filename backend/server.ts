@@ -11,6 +11,9 @@
 //   3. conversation-details — after the call, loads transcript + metadata.
 //   4. recording           — streams the recorded video for playback.
 //
+// This demo does not authenticate users. Protect /api/connect before
+// production so only authenticated users can start a conversation.
+//
 // =============================================================================
 
 import express from "express";
@@ -31,7 +34,7 @@ const frontendOrigin = "http://localhost:5173";
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", frontendOrigin);
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   if (req.method === "OPTIONS") {
     res.sendStatus(204);
     return;
