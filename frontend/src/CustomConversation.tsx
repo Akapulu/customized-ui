@@ -9,7 +9,8 @@
  *    render the assistant video, local PiP, and self-view fallback; `useAkapuluMediaControls` toggles mic/cam.
  * 3. Transcripts, node updates, and bot speaking state come from the session store; tool events use `useAkapuluEvents`.
  * 4. `AkapuluBotAudio` plays assistant audio (hidden element).
- * 5. When the call ends, `onEnded(conversationId)` hands control back to `App` for the review screen.
+ * 5. `useConnectChime()` plays a short chime when status goes connecting → connected.
+ * 6. When the call ends, `onEnded(conversationId)` hands control back to `App` for the review screen.
  */
 
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -20,6 +21,7 @@ import {
   useAkapuluMediaControls,
   useAkapuluParticipantRoles,
   useAkapuluSession,
+  useConnectChime,
 } from "@akapulu/react";
 import type { NormalizedToolEvent } from "@akapulu/react";
 import { DailyVideo, useDaily, useVideoTrack } from "@daily-co/daily-react";
@@ -129,6 +131,7 @@ export function CustomConversation({ onEnded }: { onEnded: (conversationId: stri
   // In-call media: same Daily call the SDK connected
   // ---------------------------------------------------------------------------
   const { isMicMuted, isCamOff, toggleMic, toggleCam } = useAkapuluMediaControls();
+  useConnectChime();
 
   // ---------------------------------------------------------------------------
   // Local UI state

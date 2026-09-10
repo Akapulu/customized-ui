@@ -5,6 +5,7 @@
 A **fully custom** conversation UI built from `@akapulu/react` hooks + Daily
 primitives. You build the call surface yourself: video
 tiles, mic/cam/end controls, transcript, loading + error states, and tool toasts.
+`useConnectChime()` plays a short sound when the call goes live.
 Ends with a post-call review screen (recording + transcript).
 
 Two folders:
