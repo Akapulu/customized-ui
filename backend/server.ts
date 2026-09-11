@@ -24,6 +24,7 @@ const connectPayload = {
   avatar_id: "1285bfe4-3512-4b34-93ad-196098597a1c",
   runtime_vars: {},
   record_conversation: true,
+  show_ai_label: false,
 };
 
 const app = express();
